@@ -393,9 +393,20 @@ public class AltaEmpleado extends javax.swing.JFrame {
          emp.setNombre(this.jTextField1.getText() );
          emp.setApPaterno(this.jTextField2.getText() );
          emp.setApMaterno(jTextField3.getText() );
-         emp.setEdad(Integer.parseInt(jTextField4.getText() ) );
+         emp.setEdad(Integer.parseInt(jTextField4.getText() ) ); // convierte a int
          emp.setCurp(jTexfield5.getText() );
-         emp.getDomicilio().setCalle(this.jTextField&.getText() );
+         emp.setDomicilio(new Direccion() );
+         emp.getDomicilio().setCalle(this.jTextField6.getText() );
+         emp.getDomicilio().setNumero(this.jTextField7.getText() );
+         emp.getDomicilio().setColonia(this.jTextField8.getText() );
+         emp.getDomicilio().setDelegacion(this.jTextField9.getText() );
+         emp.getDomicilio().setEstado(this.jTextField10.getText() );
+         emp.setNumeroEmpleado(Integer.parseInt(this.jTextField11.getText() ) );
+         emp.setDepartamento(this.jTextField12.getText() );
+         emp.setSueldo(Float.parseFloat(this.jTextField13.getText() ) );
+         emp.setHOrasExtra(Integer.parseInt(this.jTextField14.getText() ) );
+        int confirmar = J0ptiPane.showConfirmDialog(this,"Deseas guardar estos datos ?");
+         
     }//GEN-LAST:event_jButton5MouseClicked
     private void limpiarFormulario(){
      this.jTextField1.setText("");
